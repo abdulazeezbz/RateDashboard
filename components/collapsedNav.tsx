@@ -2,10 +2,8 @@
 import { useState } from 'react';
 
 
-interface CollapsedNavProps {
-  name: string;
-  title: string;
-}
+
+
 
 
 
