@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { FaHome, FaUsers, FaCog } from 'react-icons/fa';
 
 
 interface CollapsedNavProps {
