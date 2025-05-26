@@ -2,20 +2,393 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.dashboard-content{
+    position: relative;
+    width: calc(100% - 350px);
+    margin-left: 280px;
+    overflow-x: hidden;
+    margin-top: 20px;
+    
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dashboard-content .main{
+  width: 100%;
+  top: 100px;
+  position: absolute;
+  justify-content: center;
+  display: flex;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* SIDEBAR */
+.sideBar{
+    background: linear-gradient(to bottom, #F6B10A, orange);
+}
+.logo{
+    display: flex;
+    /* justify-content: space; */
+    align-items: center;
+    padding: 10px;
+}
+.navIcon{
+    background-color: #F6B10A;
+}
+
+.nav-child{
+    padding: 10px;
+    margin-top: -5px;
+    color: rgba(255, 255, 255, 0.959);
+    width: 105%;
+    margin-left: -5px;
+}
+.nav-child i{
+    margin-right: 5px;
+}
+.nav-child.active{
+    background-color: rgba(255, 255, 255, 0.185);
+    border-radius: 5px;
+}
+.time{
+    color: rgba(0, 0, 0, 0.5);
+    padding-right: 10px;
+}
+.nav-child:hover{
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.096);
+    border-radius: 5px;
+}
+
+.flexa button{
+    background: rgba(0, 0, 0, 0.0054);
+    padding: 8px 17px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.74);
+    border: 1px solid rgba(0, 0, 0, 0.055);
+    margin-right: 10px;
+}
+.flexa button.second{
+    background: rgba(218, 57, 57, 0.13);
+    color: rgb(233, 35, 35);
+    border: 1px solid rgba(255, 19, 19, 0.397);
+}
+
+
+.userIcon{
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 20px;
+    width: 140px;
+}
+
+.flexa button:hover{
+    transition: 0.4s;
+    scale: 1.05;
+}
+
+.userIcon i{
+    background: rgba(0, 0, 0, 0.123);
+    padding: 10px;
+    color: black;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.userIcon p{
+    margin-top: -5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.logo h2{
+    margin-left: 10px;
+    color: white;
+    font-size: 23px;
+}
+
+.dashboard-content.nav{
+    overflow-x: hidden;
+    width: calc(100% - 256px);
+    /* width: 1000px; */
+        position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+.block-grid {
+  width: calc(100% / 3.5);
+  min-width: 310px;
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 5px;
+  gap: 1rem;
+  padding: 10px;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px -4px black;
+}
+
+
+.block-grid:hover {
+ scale: 1.015;
+ transition: 0.5s; 
+}
+.block-grid .top .tr{
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.block-grid .top img{
+  width: 16px;
+  margin-right: 8px;
+}
+.block-grid .top i{
+  font-size:9px;
+}
+
+.block-grid .top .rr{
+  font-size: 12px;
+  color: rgb(212, 32, 32);
+}
+
+.block-grid .top .rr.success{
+  font-size: 12px;
+  color: rgb(32, 212, 101);
+}
+.block-grid .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-grid .bal.a{
+  margin-top: 6px;
+}
+
+.block-grid .bal.aa{
+    margin-top: 7px;
+}
+
+
+.block-grid .bal p{
+  color: rgba(0, 0, 0, 0.534);
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+.block-grid .bal h3{
+    font-weight: bold;
+  font-size: 17px;
+}
+
+.block-grid .ex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-grid .ex .text{
+  font-size: 12px;
+  color: #facc15;
+}
+
+.block-grid .ex button{
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #15ce1e2c;
+  outline: none;
+  margin-top: -5px;
+  border: none;
+}
+
+.block-grid .ex button.inact{
+  background-color: #ff00002c;
+
+}
+
+
+.heaa{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.slide{
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+}
+
+.slide .list{
+    cursor: pointer;
+    width: 200px;
+    padding: 5px;
+    margin-left: 2px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.slide .list.active{
+    color: rgba(255, 255, 255, 0.966);
+    background: #F6B10A;
+}
+
+
+
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #facc15; /* Tailwind's green-400 */
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+
+
+
+.coll{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (max-width:770px) {
+    .dashboard-content{
+    position: relative;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 100px;
+}
+
+.dashboard-content.nav{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.logo{
+    display: flex;
+    /* justify-content: space; */
+    align-items: center;
+    padding: 10px;
+    margin-left: 40px;
+}
+
+.dashboard-content input{
+    display: none;
+}
+.dashboard-content .time{
+    display: none;
+}
+
+.userIcon{
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px 20px;
+    width: 120px;
+    margin-left: -20px;
+}
+
+.userIcon i{
+    background: rgba(0, 0, 0, 0.123);
+    padding: 10px;
+    color: black;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.userIcon p{
+    margin-top: -5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+
+.flexa button{
+    padding: 5px 10px;
+}
+
+
+
+
+.block-grid {
+  width: 95%;
+  z-index: 100;
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 15px;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.slide{
+    width: 85%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+}
+
+.slide .list{
+    font-size: 15px;
+    cursor: pointer;
+    width: auto;
+    padding: 5px;
+    margin-left: 2px;
+    text-align: center;
+    border-radius: 5px;
+}
 }
