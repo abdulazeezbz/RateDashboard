@@ -8,10 +8,6 @@ interface CollapsedNavProps {
 }
 
 
-interface NavItem {
-  name: string;
-  title: string;
-}
 
 interface CollapsedNavProps {
   items: {
@@ -21,7 +17,6 @@ interface CollapsedNavProps {
 }
 
 const CollapsedNav = ({ items }: CollapsedNavProps) => {
-  const [expanded, setExpanded] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
