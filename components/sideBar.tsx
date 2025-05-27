@@ -47,7 +47,7 @@ useEffect(() => {
         width={35} 
         height={35} 
       />
-      <h2>BIBUAIN</h2>
+      <h2>A BIBUAIN</h2>
           </div>
         </div>
         <nav className="p-7 space-y-1">
