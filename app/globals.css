@@ -7,13 +7,13 @@
     width: calc(100% - 350px);
     margin-left: 280px;
     overflow-x: hidden;
-    margin-top: 20px;
+    margin-top: 80px;
     
 }
 
 .dashboard-content .main{
   width: 100%;
-  top: 100px;
+  top: 200px;
   position: absolute;
   justify-content: center;
   display: flex;
@@ -108,7 +108,7 @@
     overflow-x: hidden;
     width: calc(100% - 256px);
     /* width: 1000px; */
-        position: relative;
+        position: fixed;
     margin-left: 0px;
     margin-top: 0px;
 }
@@ -144,7 +144,7 @@
   height: 20px;
   justify-content: center;
   align-items: center;
-  font-weight: bolder;
+  font-weight: bold;
 }
 .block-grid .top img{
   width: 16px;
@@ -184,7 +184,7 @@
   margin-bottom: 0px;
 }
 .block-grid .bal h3{
-    font-weight: bold;
+    font-weight: 500;
   font-size: 17px;
 }
 
@@ -216,7 +216,8 @@
 
 
 .heaa{
-    font-size: 25px;
+    font-size: 20px;
+    padding-left: 25px;
     font-weight: bold;
 }
 
@@ -309,12 +310,12 @@ input:checked + .slider:before {
     position: relative;
     width: 100%;
     margin-left: 0px;
-    margin-top: 100px;
+    /* margin-top: 80px; */
 }
 
 .dashboard-content.nav{
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 }
@@ -375,7 +376,7 @@ input:checked + .slider:before {
 }
 
 .slide{
-    width: 85%;
+    width: 90%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -383,12 +384,18 @@ input:checked + .slider:before {
 }
 
 .slide .list{
-    font-size: 15px;
+    font-size: 12px;
     cursor: pointer;
     width: auto;
     padding: 5px;
     margin-left: 2px;
     text-align: center;
     border-radius: 5px;
+}
+
+.coll{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 }

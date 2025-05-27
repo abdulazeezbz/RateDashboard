@@ -37,8 +37,8 @@ export default function Home() {
               <CollapsedNav
   items={[
     { name: 'Bitcoin', title: 'BTC' },
-    { name: 'Users', title: 'Manage' },
-    { name: 'Settings', title: 'Conf' },
+    { name: 'Tether', title: 'USDT' },
+    { name: 'Ehereum', title: 'ETH' },
   ]}
 />
             </div>
@@ -72,6 +72,8 @@ export default function Home() {
               type="Sell"
               costPrice={100}
               />
+
+              
       
           </div>
 

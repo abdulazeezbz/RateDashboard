@@ -10,7 +10,6 @@ export default function Sidebar() {
 useEffect(() => {
   const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-  // ✅ Open if large screen
   setIsOpen(mediaQuery.matches);
 
   const handler = (e: MediaQueryListEvent) => setIsOpen(e.matches);
@@ -47,7 +46,7 @@ useEffect(() => {
         width={35} 
         height={35} 
       />
-      <h2>A BIBUAIN</h2>
+      <h2>BIBUAIN</h2>
           </div>
         </div>
         <nav className="p-7 space-y-1">
