@@ -26,10 +26,19 @@ const BlockGrid = ({ name, change, changeType, costPrice, balance, type,active  
         <div className='tr'>
           <p>{name}</p>
         </div>
-        <div className={`rr ${changeType}`}>
-          {/* <i className={`fas ${changeType === 'success' ? 'fa-arrow-up' : 'fa-arrow-down'}`}></i> */}
-          {type}
-        </div>
+        
+      <div className={`rr ${changeType}`}>
+  <p className="flex items-center gap-1">
+    <span
+      className={`${
+        changeType === 'success' ? 'text-red-500' : 'text-green-500'
+      }`}
+    >
+      {type}
+    </span>
+  </p>
+</div>
+
       </div>
 
       <div className="bal aa">

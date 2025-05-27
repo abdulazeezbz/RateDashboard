@@ -17,6 +17,7 @@
   height: 100vh;
   position: absolute;
   justify-content: center;
+  background: red;
   display: flex;
 }
 
@@ -366,8 +367,204 @@ input:checked + .slider:before {
   border-radius: 5px;
 }
 
-@media screen and (max-width:770px) {
+.dashboard-content .btt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
 
+.dashboard-content .btt button{
+  width: 95%;
+  background: linear-gradient(to left, #F6B10A, #facc15);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.dashboard-content .btt button:hover{
+  scale: 0.991;
+  box-shadow: black 0px 0px 10px -6px ;
+  transition: 0.5s;
+}
+
+
+.myOffers{
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.myOffers .form-top{
+  margin-top: 0px;
+}
+
+.dashboard-content .myOffers .btt button{
+  width: auto;
+  padding: 7px 10px;
+  margin-left: 20px;
+  background: rgb(14, 184, 65);
+}
+
+.dashboard-content .myOffers .btt button.deactivate{
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  color: red;
+}
+
+.dashboard-content .myOffers .btt{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+.coinss p{
+  background: #00000013;
+  padding: 2px 5px;
+  width: 60px;
+  text-align: center;
+  font-size: 11px;
+  color: #000;
+  border-radius: 25px;
+  border: 1px solid #75581349;
+}
+
+.coinss.binanceBG p{
+  background: #e0ca0734;
+}
+
+.coinss.CoinBG p{
+  background: #07a2e025;
+}
+
+
+
+
+
+.modall{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.342);
+  position: fixed;
+  backdrop-filter: blur(4);
+  top: 0;
+  right: 0;
+  z-index: 100;
+  animation: pop 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modall .content{
+  background: white;
+  width: 35%;
+  animation: slideTop 0.5s;
+  border-radius: 5px;
+  padding: 15px;
+}
+.modall .heaaa{
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 5px;
+  font-size: 17px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.modall .heaaa i{
+  color: #000000c7;
+}
+
+.modall p{
+  font-size: 14px;
+  margin-left: 8px;
+  color: #000000c7;
+}
+
+.modall .btnrr{
+  border-radius: 6px;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  padding: 8px 20px;
+  background: #00000005;
+}
+
+.modall .btnrr.active{
+  background: #facc15;
+  color: white;
+}
+
+.actionn{
+  background-color: rgba(0, 0, 0, 0.041);
+  border: #00000013 solid 1px;
+  padding: 4px 15px;
+  border-radius: 5px;
+}
+
+.myOffers.last{
+  margin-bottom: 50px;
+}
+
+.bNotif{
+  width: 350px;
+  position: fixed;
+  background: rgb(240, 239, 239);
+  border: #00000013 solid 1px;
+  padding: 10px;
+  bottom: 20px;
+  right: 10px;
+  border-radius: 10px;
+  animation: fromright 0.4s;
+}
+
+.bNotif h3{
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.bNotif p{
+  font-size: 13px;
+}
+
+@keyframes fromright {
+   0%{
+    transform: translateX(400px);
+  }
+
+   20%{
+    transform: translateX(-50px);
+  }
+
+   20%{
+    transform: translateX(20px);
+  }
+
+    50%{
+    transform: translateX(-10px);
+  }
+
+    90%{
+    transform: translateX(-0px);
+  }
+}
+@keyframes slideTop {
+  0%{
+    transform: translateY(100px);
+  }
+}
+
+@keyframes pop {
+  0%{
+    opacity: 0;
+  }
+}
+
+
+@media screen and (max-width:770px) {
+.bNotif{
+  width: 95%;
+
+}
   .dashboard-content .pricing.b{
     width: 98%;
   flex-direction: column;
@@ -491,4 +688,13 @@ input:checked + .slider:before {
   border: 1px dashed rgba(0, 0, 0, 0.342);
   width: 95%;
 }
+
+
+.modall .content{
+  background: white;
+  width: 90%;
+  animation: slideTop 0.5s;
+  border-radius: 5px;
+}
+
 }

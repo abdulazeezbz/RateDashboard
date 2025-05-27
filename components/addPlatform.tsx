@@ -88,6 +88,14 @@ const NewPlatform = () => {
     </div>
 
 
+
+<div className="btt">
+  <button>Apply To All Platforms</button>
+</div>
+
+
+
+
     
     </>
   )
