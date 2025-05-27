@@ -1,17 +1,15 @@
 'use client';
-import { useState, useEffect } from 'react';
 
 
 
 interface UserTableProps {
-  active: string;
   title: string;
   mini: string;
   onClose: () => void;
   onConfirm: () => void;
 }
 
-const AlertModal: React.FC<UserTableProps> = ({ active, title, mini, onClose, onConfirm }) => {
+const AlertModal: React.FC<UserTableProps> = ({ title, mini, onClose, onConfirm }) => {
 
 
 
