@@ -378,13 +378,13 @@ input:checked + .slider:before {
 .slide{
     width: 90%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     background: white;
 }
 
 .slide .list{
-    font-size: 12px;
+    font-size: 13px;
     cursor: pointer;
     width: auto;
     padding: 5px;
