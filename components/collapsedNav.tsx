@@ -35,7 +35,7 @@ const CollapsedNav = ({ items }: CollapsedNavProps) => {
       <i className='fa fa-add p-2' ></i>
     </div>
 
-    <div className='right'>Right no</div>
+    <div className='right'>Refresh</div>
   </div>
   );
 };
