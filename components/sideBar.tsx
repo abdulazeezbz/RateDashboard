@@ -5,18 +5,22 @@ import Image from 'next/image';
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
 
-  // Close sidebar by default on smaller screens
+
+  
 useEffect(() => {
   const mediaQuery = window.matchMedia("(min-width: 768px)");
-  setIsOpen(!mediaQuery.matches); // closed if small screen
 
-  const handler = (e: MediaQueryListEvent) => setIsOpen(!e.matches);
+  // ✅ Open if large screen
+  setIsOpen(mediaQuery.matches);
+
+  const handler = (e: MediaQueryListEvent) => setIsOpen(e.matches);
   mediaQuery.addEventListener("change", handler);
 
   return () => {
     mediaQuery.removeEventListener("change", handler);
   };
 }, []);
+
 
   return (
     <>
