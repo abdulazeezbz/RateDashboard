@@ -6,15 +6,17 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
 
   // Close sidebar by default on smaller screens
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    setIsOpen(!mediaQuery.matches); // closed if small screen
+useEffect(() => {
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  setIsOpen(!mediaQuery.matches); // closed if small screen
 
-    const handler = (e) => setIsOpen(!e.matches);
-    mediaQuery.addEventListener("change", handler);
+  const handler = (e: MediaQueryListEvent) => setIsOpen(!e.matches);
+  mediaQuery.addEventListener("change", handler);
 
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, []);
+  return () => {
+    mediaQuery.removeEventListener("change", handler);
+  };
+}, []);
 
   return (
     <>
