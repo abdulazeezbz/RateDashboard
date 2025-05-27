@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-
+import CustomSelect from './DropDownSelect'
 
 
 
@@ -15,6 +15,12 @@ interface CollapsedNavProps {
 }
 
 const CollapsedNav = ({ items }: CollapsedNavProps) => {
+
+   const handleSelection = (value: string) => {
+    console.log('Selected:', value);
+  };
+
+
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
@@ -35,7 +41,18 @@ const CollapsedNav = ({ items }: CollapsedNavProps) => {
       <i className='fa fa-add p-2' ></i>
     </div>
 
-    <div className='right'>Refresh</div>
+    <div className='right'>
+        <CustomSelect
+        label="Currency"
+        options={['EUR', 'GBP', 'NGN']}
+        onSelect={handleSelection}
+      />
+
+       <button onClick={()=>window.location.href="#"} className='bg-white border border-gray-300 rounded-lg px-4 py-2 flex justify-between items-center cursor-pointer ml-5'>
+        <i className='fa fa-refresh mr-2'></i> Refresh
+        </button>
+       
+    </div>
   </div>
   );
 };
