@@ -12,11 +12,8 @@ interface UserTableProps {
 }
 
 const AlertModal: React.FC<UserTableProps> = ({ active, title, mini, onClose, onConfirm }) => {
-  const [isActive, setIsActive] = useState(false);
 
-  useEffect(() => {
-    setIsActive(active === 'true'); // Convert string to boolean if needed
-  }, [active]);
+
 
   
 
