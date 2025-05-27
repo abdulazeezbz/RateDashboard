@@ -369,7 +369,7 @@ input:checked + .slider:before {
 @media screen and (max-width:770px) {
 
   .dashboard-content .pricing.b{
-    width: 190%;
+    width: 98%;
   flex-direction: column;
   /* justify-content: flex-start; */
   align-items: flex-start;
@@ -377,7 +377,7 @@ input:checked + .slider:before {
 }
 
 .dashboard-content .pricing .child input{
-  width: 100%;
+  width: 205%;
   outline: solid 1px rgba(0, 0, 0, 0.062);
   border-radius: 5px;
   padding: 7px 5px;

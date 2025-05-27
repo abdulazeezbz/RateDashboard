@@ -3,7 +3,6 @@ import Sidebar from '../components/sideBar'
 import Topbar from '../components/topBar'
 import BlockGrid from '../components/coinBalances'
 import CollapsedNav from '../components/collapsedNav';
-import CustomSelect from '@/components/DropDownSelect';
 import NewPlatform from '../components/addPlatform';
 
 export default function Home() {
